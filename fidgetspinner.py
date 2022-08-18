@@ -22,11 +22,12 @@ def spinner():
     right(120)
     update()
 def animate():
-    print("animate")
+    global turn
     spinner()
+    if turn>0:
+        turn -= 1
     ontimer(animate, 20)
 def flick():
-    print("flick")
     global turn
     turn = turn+10
     print(turn)
